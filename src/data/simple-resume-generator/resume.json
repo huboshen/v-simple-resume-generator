@@ -1,0 +1,152 @@
+{
+    "_comment": "sample data from: https://resumegenius.com/resume-samples/web-developer-resume-example",
+    "name": "ADAM WEST",
+    "contacts": [
+        { "id": 1, "label": "Mobile", "value": "(714) 463-7533" },
+        {
+            "id": 2,
+            "label": "Email",
+            "value": "adam.west@gmail.com"
+        },
+        {
+            "id": 3,
+            "label": "Address",
+            "value": "Fullerton, CA 92832"
+        },
+        {
+            "id": 4,
+            "label": "LinkedIn",
+            "value": "www.linkedin.com/in/adamwest76"
+        },
+        {
+            "id": 5,
+            "label": "Github",
+            "value": "github.com/adamwest76"
+        }
+    ],
+    "left": [
+        {
+            "id": 1,
+            "h2": "PROFESSIONAL SUMMARY",
+            "content": [
+                {
+                    "textarea": "Web Developer with 8 years of experience in designing and developing user interfaces, testing, debugging, and training staff within eCommerce technologies. Proven ability in optimizing web functionality that improve data retrieval and workflow efficiencies."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "h2": "PROFESSIONAL EXPERIENCE",
+            "content": [
+                {
+                    "h3": "Grooming Technologies - Web Developer",
+                    "h4": "Fullerton, CA • 05/2010 - Present",
+                    "ul": [
+                        {
+                            "li": "Revamped web application security applications, minimizing hacker attacks from 2.3% to 0.02%"
+                        },
+                        {
+                            "li": "Designed and developed user-friendly website, including optimized check-out page that increased user clicks, and subsequently customer purchases by 20%"
+                        },
+                        {
+                            "li": "Trained over 50 staff members in internal web functions, including steps on how to independently make minor updates or changes"
+                        },
+                        {
+                            "li": "Fixed bugs from existing websites and implemented enhancements that significantly improved web functionality and speed"
+                        }
+                    ]
+                },
+                {
+                    "h3": "Focus Solutions - Web Developer",
+                    "h4": "Fullerton, CA • 06/2007 - 04/2010",
+                    "ul": [
+                        {
+                            "li": "Developed dynamic and interactive website that ensured high traffic, page views, and User Experience, resulting in 40% increase in sales revenue"
+                        },
+                        {
+                            "li": "Oversaw full lifecycle of software development for 9 projects with 100% on time delivery while staying 5% under budget"
+                        },
+                        {
+                            "li": "Implemented server that expedited document generation and search functionality by 20%, earning commendation and award from upper management"
+                        },
+                        {
+                            "li": "Designed processes for cleanup and performance improvement, that minimized downtime by 13%"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "right": [
+        {
+            "id": 3,
+            "h2": "SKILLS",
+            "content": [
+                {
+                    "ul": [
+                        {
+                            "li": "Proficient in ASP"
+                        },
+                        {
+                            "li": "Proficient in SQL"
+                        },
+                        {
+                            "li": "Proficient in JavaScript"
+                        },
+                        {
+                            "li": "Proficient in Visual Basic"
+                        },
+                        {
+                            "li": "Proficient in XML"
+                        },
+                        {
+                            "li": "Proficient in C#"
+                        },
+                        {
+                            "li": "Proficient in Ajax"
+                        },
+                        {
+                            "li": "Proficient in HTML"
+                        },
+                        {
+                            "li": "General Knowledge in Perl"
+                        },
+                        {
+                            "li": "General Knowledge in Python"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "h2": "EDUCATION",
+            "content": [
+                {
+                    "h3": "California State University",
+                    "h4": "Fullerton, CA",
+                    "textarea": "Bachelor of Science in Web Development\nGPA: 3.6 / 4.0"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "h2": "ADDITIONAL SKILLS",
+            "content": [
+                {
+                    "ul": [
+                        {
+                            "li": "Proficient in WordPress, Dreamweaver, and Photoshop"
+                        },
+                        {
+                            "li": "Ability to communicate with cross-functional teams"
+                        },
+                        {
+                            "li": "Certified Java Programmer"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
