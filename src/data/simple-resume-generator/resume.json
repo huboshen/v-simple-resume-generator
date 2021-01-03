@@ -36,6 +36,7 @@
         },
         {
             "id": 2,
+            "hasToolBar" : true,
             "h2": "PROFESSIONAL EXPERIENCE",
             "content": [
                 {
@@ -121,6 +122,7 @@
         {
             "id": 4,
             "h2": "EDUCATION",
+            "hasToolBar" : true,
             "content": [
                 {
                     "h3": "California State University",

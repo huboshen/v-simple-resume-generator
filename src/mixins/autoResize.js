@@ -3,18 +3,25 @@
 // autoResize.js
 export default {
     methods: {
-        mixin_autoResize_resize(event) {
-            event.target.style.height = "auto";
-            event.target.style.height = `${event.target.scrollHeight}px`;
+        mixin_autoResize_resize() {
+            // event.target.style.height = "auto";
+            // event.target.style.height = `${event.target.scrollHeight}px`;
         },
     },
-    mounted() {
-        this.$nextTick(() => {
-            const textareaNode = this.$el.getElementsByTagName("textarea")[0];
-            if (textareaNode) {
-                let calHeight = textareaNode.scrollHeight;
-                textareaNode.style.height = `${calHeight}px`;
-            }
-        });
+    watch: {
+        inputValue: {
+            immediate: true,
+            handler: function() {
+                // this.$nextTick(() => {
+                //     const textareaNode = this.$refs.cTextarea
+                //     if (textareaNode) {
+                //         let calHeight = textareaNode.scrollHeight;
+                //         console.log('calHeight', calHeight);
+                //         console.log(textareaNode.value);
+                //         textareaNode.style.height = `${calHeight}px`;
+                //     }
+                // });
+            },
+        },
     },
 };

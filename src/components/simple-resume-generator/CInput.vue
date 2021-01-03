@@ -1,11 +1,21 @@
 <script>
 import { h } from "vue";
 import mixinAutoResize from "@/mixins/autoResize.js";
+import Toolbar from "@/components/simple-resume-generator/Toolbar";
 
 export default {
     name: "CInput",
     mixins: [mixinAutoResize],
+    emits: {
+        copy: null,
+        remove: null,
+        "update:inputValue": null,
+    },
     props: {
+        cID: {
+            type: String,
+            required: true,
+        },
         inputValue: {
             type: String,
             required: true,
@@ -33,9 +43,10 @@ export default {
         },
     },
     render() {
-        const dot = [];
+        const additionalElementsBefore = [];
+        const additionalElementsAfter = [];
         if (this.wrapperClasses.li) {
-            dot.push(
+            additionalElementsBefore.push(
                 h(
                     "div",
                     {
@@ -49,6 +60,47 @@ export default {
                     "• "
                 )
             );
+            additionalElementsAfter.push(
+                h(Toolbar, {
+                    onCopy: () => {
+                        this.$emit("copy", this.cID);
+                    },
+                    onRemove: () => {
+                        this.$emit("remove", this.cID);
+                    },
+                })
+            ); // add a toolbar component
+        }
+        const inputAttributes = {
+            rows: 1,
+            class: Object.assign(
+                {
+                    "borderless-input": true,
+                    "dashed-border": false,
+                },
+                this.inputClasses
+            ),
+            style: {
+                width: this.inputWidth,
+                resize: "none",
+                "line-height": this.lineHeight,
+                "flex-grow": 1,
+            },
+            value: this.inputValue,
+            onInput: ($event) => {
+                const tagName = $event.target.tagName;
+                console.log("tagName", tagName);
+                if (tagName === "DIV") {
+                    this.$emit("update:inputValue", $event.target.innerHTML);
+                } else {
+                    this.$emit("update:inputValue", $event.target.value);
+                }
+            },
+        };
+        let thisTag = "input";
+        if (this.htmlTag === "textarea") {
+            thisTag = "div";
+            inputAttributes.contenteditable = true;
         }
         return h(
             "div",
@@ -64,28 +116,9 @@ export default {
                 },
             },
             [
-                ...dot,
-                h(this.htmlTag || "input", {
-                    rows: 1,
-                    class: Object.assign(
-                        {
-                            "borderless-input": true,
-                            "dashed-border": false,
-                        },
-                        this.inputClasses
-                    ),
-                    style: {
-                        width: this.inputWidth,
-                        resize: "none",
-                        "line-height": this.lineHeight,
-                        "flex-grow": 1,
-                    },
-                    value: this.inputValue,
-                    onInput: ($event) => {
-                        this.$emit("update:inputValue", $event.target.value);
-                        this.mixin_autoResize_resize($event);
-                    },
-                }),
+                ...additionalElementsBefore,
+                h(thisTag, inputAttributes, this.inputValue),
+                ...additionalElementsAfter,
             ]
         );
     },
@@ -98,6 +131,7 @@ functions. (13 DEC 2020) // ref: https://github.com/vuejs/vue-next/issues/1539
 @import "~@/styles/simple-resume-generator/_variables.scss";
 
 .cinput-wrapper {
+    position: relative;
     width: 100%;
     * {
         font-weight: 300;
@@ -135,15 +169,15 @@ functions. (13 DEC 2020) // ref: https://github.com/vuejs/vue-next/issues/1539
         font-size: 0.9 * $base-font-size !important;
         margin-block-end: 0;
         margin-block-start: 0rem;
-        margin-block-end: 0rem;
+        margin-block-end: 0mm;
     }
     h4 {
         font-size: 0.75 * $base-font-size !important;
         margin-top: 2mm;
-        margin-bottom: 2mm;
+        // margin-bottom: 2mm;
         font-weight: 300;
         margin-block-start: 0.5rem;
-        margin-block-end: 0.2rem;
+        margin-block-end: 0mm;
     }
     .borderless-input {
         color: inherit;
@@ -174,6 +208,12 @@ functions. (13 DEC 2020) // ref: https://github.com/vuejs/vue-next/issues/1539
     }
     .f-bold {
         font-weight: 700;
+    }
+    input:focus,
+    div[contenteditable="true"]:focus {
+        & ~ .toolbar {
+            display: block !important;
+        }
     }
 }
 </style>
