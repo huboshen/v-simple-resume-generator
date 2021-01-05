@@ -213,6 +213,7 @@ export default {
         background: #e0e0e0;
     }
     #resume-wrapper {
+        padding-bottom: 10mm;
         background: #e0e0e0;
         .sheet {
             background: white;
