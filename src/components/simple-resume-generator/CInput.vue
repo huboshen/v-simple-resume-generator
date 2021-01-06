@@ -209,6 +209,9 @@ functions. (13 DEC 2020) // ref: https://github.com/vuejs/vue-next/issues/1539
     .f-bold {
         font-weight: 700;
     }
+    div[contenteditable="true"] {
+        white-space: pre-wrap;
+    }
     input:focus,
     div[contenteditable="true"]:focus {
         & ~ .toolbar {
