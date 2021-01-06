@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="192" height="264" src="https://github.com/huboshen/v-simple-resume-generator/blob/master/public/preview.png" />
+</p>
+
 # V Simple Resume Generator
 > A simple resume generator based on Vue.js.   
 
