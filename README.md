@@ -1,7 +1,8 @@
-# V simple resume generator
+# V Simple Resume Generator
 > A simple resume generator based on Vue.js.   
 
-Demo: https://huboshen.github.io/v-simple-resume-generator/
+## Demo
+https://huboshen.github.io/v-simple-resume-generator/
 
 ## Installation
 Clone the repository and go to the project root directory, then install the npm packages by
