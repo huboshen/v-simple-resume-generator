@@ -1,24 +1,19 @@
-# simple-resume-generator
+# V simple resume generator
+> A simple resume generator based on Vue.js.   
 
-## Project setup
-```
+Demo: https://huboshen.github.io/v-simple-resume-generator/
+
+## Installation
+Clone the repository and go to the project root directory, then install the npm packages by
+```bash
 npm install
 ```
-
-### Compiles and hot-reloads for development
-```
+Compile and run the application by
+```bash
 npm run serve
 ```
+By default the application runs on:
+http://localhost:8080/v-simple-resume-generator/ 
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## License
+MIT
