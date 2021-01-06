@@ -13,7 +13,7 @@ Compile and run the application by
 ```bash
 npm run serve
 ```
-By default the application runs on:
+By default, the application runs on:
 http://localhost:8080/v-simple-resume-generator/ 
 
 ## License
